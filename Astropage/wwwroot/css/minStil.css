@@ -1,0 +1,330 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+/* grundläggande stil för hela sidan */
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #729dc5; /* bakgrundsfärgen */
+}
+
+body {
+    margin-top: 0;
+}
+
+/* stil för länkar i navigationsmenyn */
+.nav-link {
+    color: black;
+    font-weight: 600;
+    font-size: 28px; 
+    margin-right: 10px; 
+    transition: color 0.5s;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.nav a.active {
+    font-weight: bold; 
+    color: #3b4586; 
+}
+
+
+
+/* ändra färg på länkar när musen hovrar över dem */
+.nav-link:hover {
+    color: #3b4586;
+}
+
+
+/* stil för huvudrubrik och navigationsfält */
+header {
+    background-color: #4d6e9b; /* bakgrundsfärgen för header */
+    display: flex; /* flexbox layout */
+    justify-content: space-between;
+    align-items: center; /* centrerar elementen vertikalt */
+    padding: 0 20px; /* mellanrum åt höger och vänster */
+    flex-wrap: wrap; /* element får lägga sig under varandra om de inte får plats bredvid varandra */
+    margin-top: 0;
+}
+
+.btn-primary:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* justera skuggans egenskaper efter behov */
+    background-color: #4d6e9b; /* Bakgrundsfärg */
+    color: black; /* Textfärg */
+    border-color: #3b4586;
+}
+
+.btn-outline-primary:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #3b4586;
+    color: black;
+    border-color: #3b4586;
+}
+/* stil för knappar */
+.btn-primary,
+.btn-outline-primary {
+    font-size: 20px; /* Textstorlek för knapparna */
+    font-weight: 600;
+}
+
+/* stil för knappar med vit text på blå bakgrund */
+.btn-outline-primary {
+    background-color: #3b4586; /* bakgrundsfärg */
+    color: black; /* Textfärg */
+    border-color: #3b4586; /* hantdelen av knappen */
+}
+
+.btn-primary {
+    background-color: #4d6e9b;
+    color: black;
+    border-color: #3b4586;
+}
+
+/* stil för huvudbild med bakgrundsbild */
+.minHeader {
+    background-image: url('/Bilder/minNyaHeader.jpg'); 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center top; 
+    width: 100%; 
+    height: 300px; 
+    position: relative;
+    padding: 0; /* a bort padding */
+    margin: 10px; /* marginal runt elementet */
+    z-index: 1; /* plaerar elementet över andra */
+}
+
+/* stil för navigationsmenyn */
+.nav {
+    display: flex; /* Flexbox layout för att placera element bredvid varandra */
+}
+
+    .nav ul {
+        list-style: none; /* tar bort punktlistan från ul-elementet */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center; /* centrera länkarna horisontellt */
+    }
+
+        .nav ul li {
+            margin: 0 10px;
+        }
+
+            .nav ul li a {
+                text-decoration: none;
+                color: #FFF;
+            }
+
+    .nav .btn {
+        margin-left: 10px;
+    }
+
+        .nav .btn:last-child {
+            margin-left: auto;
+        }
+
+/* stil för huvudinnehållet */
+.content-view {
+    padding: 20px; /* mellanrum runt innehållet */
+    background-color: #729dc5; /* bakgrundsfärg */
+    max-width: 70%; /* max bredd för innehållet */
+    margin: 0 auto; /* centrerar innehållet horisontellt */
+    box-sizing: border-box; /* räknar med padding och border i elementets storlek */
+}
+
+.up-btn {
+    background-color: #3b4586;
+    color: black;
+    box-shadow: none;
+    border-radius: 10px;
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .7%;
+}
+
+.down-btn {
+    background-color: #3b4586;
+    color: black;
+    box-shadow: none;
+    border-radius: 10px;
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .7%;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px; /* fontstorleken efter behov för bättre läsbarhet på mindre skärmar */
+    }
+
+    .nav-link {
+        font-size: 20px; /* textstorleken för navigationslänkar */
+    }
+
+    header {
+        padding: 10px 10px; /* padding för header-elementet */
+    }
+
+    .content-view {
+        padding: 10px; /* padding för innehållet */
+    }
+
+    .up-btn, .down-btn {
+        font-size: 16px; /*textstorleken för knapparna */
+        padding: 5px 8px; /*  padding för knapparna */
+    }
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem; /* Ssörre textstorlek för större skärmar */
+    }
+}
+
+.b-example-divider {
+    width: 100%; /* Full bredd */
+    height: 3rem; /* Höjd */
+    background-color: rgba(0, 0, 0, .1); /* genomskinlig bakgrundsfärg */
+    border: solid rgba(0, 0, 0, .15); /* kantlinje */
+    border-width: 1px 0; /* kantlinje tjocklek */
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15); /* skugga */
+}
+
+
+.footer-content .text-body-secondary {
+    color: black !important;
+}
+
+.read-more-content {
+    font-size: 22px;
+    font-weight: 700;
+    color: black !important;
+}
+
+/* Inloggningsfunktioner  */
+
+.form-signing {
+    width: 15%;
+}
+
+.form-floating {
+    margin-bottom: 14px; 
+    margin-right: 450px;
+    margin-left: 450px;
+}
+
+.form-floating {
+    margin-bottom: 14px; 
+    margin-right: 450px;
+    margin-left: 450px;
+}
+
+.h3.mb-3.fw-normal {
+    margin-right: 450px;
+    margin-left: 450px;
+}
+
+.btn.btn-primary.w-60.py-2 {
+    margin: 0 auto; 
+    display: block; 
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; 
+}
+
+.form-check-label {
+    margin-left: 10px; 
+}
+
+main {
+    margin-top: 200px; 
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+.btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+}
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+    }

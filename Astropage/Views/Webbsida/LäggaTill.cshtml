@@ -1,0 +1,54 @@
+﻿@model astro
+@{
+    Layout = "~/Views/Shared/minMall.cshtml";
+}
+<link href="~/css/minStil.css" rel="stylesheet" />
+
+
+<main class="container">
+
+    <div class="content-view">
+        <div class="read-more-content">
+
+            <h1>Add your name and birthday:</h1>
+            <form asp-action="LäggaTill" method="post">
+                <div class="col-md-7 col-lg-8 mx-auto">
+                    <div class="row g-3">
+                        <div class="col-md-7 col-lg-8 mx-auto">
+                            <label asp-for="Name" class="form-label text-black">Name:</label>
+                            <input asp-for="Name" class="form-control" placeholder="Add name" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-lg-8 mx-auto">
+                        <label asp-for="Date" class="form-label text-black">Date:</label>
+                        <input asp-for="Date" class="form-control" placeholder="Add date" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</main>
+<!--Footer -->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap" /></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Alice Astrology, Inc</span>
+        </div>
+    </footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="javascript.js"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
